@@ -13,7 +13,7 @@ export default function NavBar({ isAuthenticated, userName }) {
   ];
 
   return (
-    <nav className="w-full border-b bg-white/80 backdrop-blur-md sticky top-0 z-50">
+    <nav className="w-full bg-white/80 backdrop-blur-md sticky top-0 z-50">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
         {/* Logo / Brand */}
         <a href="/" className="flex items-center gap-2">
@@ -72,7 +72,7 @@ export default function NavBar({ isAuthenticated, userName }) {
                 <span className="flex h-6 w-6 items-center justify-center rounded-full bg-indigo-600 text-[11px] font-semibold text-white">
                   {userName?.[0]?.toUpperCase() || "U"}
                 </span>
-                <span className="max-w-[7rem] truncate">
+                <span className="`max-w-[7rem]` truncate">
                   {userName || "User"}
                 </span>
               </a>

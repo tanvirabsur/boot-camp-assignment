@@ -6,7 +6,7 @@ export default function HeroSection() {
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-32 -top-40 h-72 w-72 rounded-full bg-indigo-600/30 blur-3xl" />
         <div className="absolute -right-40 top-10 h-80 w-80 rounded-full bg-emerald-500/25 blur-3xl" />
-        <div className="absolute bottom-[-8rem] left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-cyan-500/20 blur-3xl" />
+        <div className="absolute `bottom-[-8rem]` left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-cyan-500/20 blur-3xl" />
       </div>
 
       <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-10 px-4 py-20 md:flex-row md:py-24 lg:px-6">
@@ -21,7 +21,7 @@ export default function HeroSection() {
             <span className="block text-slate-100">
               Find the right college,
             </span>
-            <span className="mt-2 inline bg-gradient-to-r from-indigo-400 via-cyan-300 to-emerald-300 bg-clip-text text-transparent">
+            <span className="mt-2 inline `bg-gradient-to-r` from-indigo-400 via-cyan-300 to-emerald-300 bg-clip-text text-transparent">
               book facilities without confusion.
             </span>
           </h1>
@@ -54,7 +54,7 @@ export default function HeroSection() {
               <span className="text-base font-semibold text-slate-50">
                 50+
               </span>
-              <span className="max-w-[7rem] leading-snug">
+              <span className="`max-w-[7rem]` leading-snug">
                 trusted colleges on this platform
               </span>
             </div>
@@ -141,7 +141,7 @@ export default function HeroSection() {
                   <span className="font-semibold text-emerald-300">2 / 4</span>
                 </div>
                 <div className="h-1.5 w-full overflow-hidden rounded-full bg-slate-800">
-                  <div className="h-full w-1/2 rounded-full bg-gradient-to-r from-indigo-400 via-cyan-300 to-emerald-300" />
+                  <div className="h-full w-1/2 rounded-full `bg-gradient-to-r` from-indigo-400 via-cyan-300 to-emerald-300" />
                 </div>
                 <p className="text-[10px] text-slate-400">
                   Finish your profile to get more accurate college matches.

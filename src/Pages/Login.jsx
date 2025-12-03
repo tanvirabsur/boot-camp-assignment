@@ -2,7 +2,7 @@
 
 export default function Login() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 px-4">
+    <div className="min-h-screen flex items-center justify-center `bg-gradient-to-br` from-slate-900 via-slate-950 to-slate-900 px-4">
       <div className="w-full max-w-md bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl">
         
         {/* Logo */}
@@ -59,9 +59,9 @@ export default function Login() {
 
         {/* OR Line */}
         <div className="flex items-center gap-3 my-6">
-          <div className="h-px bg-white/20 flex-grow"></div>
+          <div className="h-px bg-white/20 `flex-grow`"></div>
           <span className="text-slate-300 text-xs">OR</span>
-          <div className="h-px bg-white/20 flex-grow"></div>
+          <div className="h-px bg-white/20 `flex-grow`"></div>
         </div>
 
         {/* Social Login Buttons */}

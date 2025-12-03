@@ -43,7 +43,7 @@ export default function GallerySection() {
   return (
     <section
       id="gallery"
-      className="py-16 bg-gradient-to-b from-slate-50 to-white"
+      className="py-16 `bg-gradient-to-b from-slate-50 to-white"
     >
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         {/* Heading */}
@@ -64,7 +64,7 @@ export default function GallerySection() {
               className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-sm"
             >
               {/* Image */}
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="`aspect-[4/3]` overflow-hidden">
                 <img
                   src={item.src}
                   alt={item.title}
@@ -73,7 +73,7 @@ export default function GallerySection() {
               </div>
 
               {/* Overlay */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="pointer-events-none absolute inset-0 `bg-gradient-to-t` from-slate-900/70 via-slate-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               {/* Text on bottom */}
               <div className="absolute inset-x-0 bottom-0 p-4">

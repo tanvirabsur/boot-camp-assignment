@@ -36,7 +36,7 @@ export default function ReviewsSection() {
   return (
     <section
       id="reviews"
-      className="py-16 bg-gradient-to-b from-white to-slate-50"
+      className="py-16 `bg-gradient-to-b` from-white to-slate-50"
     >
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         {/* Heading */}
