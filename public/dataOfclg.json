@@ -1,152 +1,238 @@
 {
   "colleges": [
-    {
-      "id": "horizon-international-college",
-      "name": "Horizon International College",
-      "location": "Dhaka, Bangladesh",
-      "rating": 4.7,
-      "coverImage": "https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg",
-      "images": [
-        "https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg",
-        "https://images.pexels.com/photos/256455/pexels-photo-256455.jpeg",
-        "https://images.pexels.com/photos/3259629/pexels-photo-3259629.jpeg"
-      ],
-      "admission": {
-        "session": "2025-2026",
-        "startDate": "15 Feb 2025",
-        "endDate": "30 Mar 2025",
-        "defaultAdmissionDate": "18 Feb 2025",
-        "process": [
-          "Create an account on CampusBook platform.",
-          "Fill out the admission application form.",
-          "Upload academic documents & photo.",
-          "Select department and confirm choices.",
-          "Complete payment via online gateway."
-        ]
-      },
-      "stats": {
-        "researchCount": 120
-      },
-      "researchWorks": [
-        {
-          "id": "horizon-r1",
-          "title": "AI-based Student Performance Prediction",
-          "year": 2024,
-          "summary": "Using machine learning models to predict student results.",
-          "link": "#"
-        },
-        {
-          "id": "horizon-r2",
-          "title": "Robotics for Smart Farming",
-          "year": 2023,
-          "summary": "Autonomous robots to support large-scale farming.",
-          "link": "#"
-        }
-      ],
-      "events": [
-        "Annual TechFest",
-        "Innovation Challenge",
-        "Robotics Expo",
-        "Cultural Night"
-      ],
-      "sports": [
-        "Football",
-        "Cricket",
-        "Basketball",
-        "Badminton",
-        "Gym & Fitness Center"
-      ]
-    },
+  {
+    "id": "horizon-international-college",
+    "name": "Horizon International College",
+    "location": "Dhaka, Bangladesh",
+    "image": "https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg",
+    "rating": 4.7,
+    "admissionStart": "15 Feb 2025",
+    "admissionEnd": "30 Mar 2025",
+    "researchCount": 120,
+    "events": ["Annual TechFest", "Innovation Challenge", "Robotics Expo"],
+    "sports": ["Football", "Cricket", "Basketball"]
+  },
+  {
+    "id": "city-premier-science-college",
+    "name": "City Premier Science College",
+    "location": "Chattogram, Bangladesh",
+    "image": "https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg",
+    "rating": 4.5,
+    "admissionStart": "01 Apr 2025",
+    "admissionEnd": "20 May 2025",
+    "researchCount": 85,
+    "events": ["Science Fair", "Physics Olympiad"],
+    "sports": ["Basketball", "Swimming"]
+  },
+  {
+    "id": "national-arts-media-college",
+    "name": "National Arts & Media College",
+    "location": "Dhaka, Bangladesh",
+    "image": "https://images.pexels.com/photos/1184580/pexels-photo-1184580.jpeg",
+    "rating": 4.3,
+    "admissionStart": "10 Jan 2025",
+    "admissionEnd": "10 Mar 2025",
+    "researchCount": 60,
+    "events": ["Film Festival", "Cultural Week"],
+    "sports": ["Badminton", "Indoor Games"]
+  },
+  {
+    "id": "south-valley-medical-institute",
+    "name": "South Valley Medical Institute",
+    "location": "Sylhet, Bangladesh",
+    "image": "https://images.pexels.com/photos/256455/pexels-photo-256455.jpeg",
+    "rating": 4.6,
+    "admissionStart": "05 Mar 2025",
+    "admissionEnd": "25 Apr 2025",
+    "researchCount": 95,
+    "events": ["Medical Camp", "Health Awareness Week"],
+    "sports": ["Cricket", "Table Tennis"]
+  },
+  {
+    "id": "greenfield-business-college",
+    "name": "Greenfield Business College",
+    "location": "Khulna, Bangladesh",
+    "image": "https://images.pexels.com/photos/256540/pexels-photo-256540.jpeg",
+    "rating": 4.2,
+    "admissionStart": "20 Feb 2025",
+    "admissionEnd": "15 Apr 2025",
+    "researchCount": 70,
+    "events": ["Startup Summit", "Case Competition"],
+    "sports": ["Football", "Indoor Games"]
+  },
+  {
+    "id": "northern-engineering-university",
+    "name": "Northern Engineering University",
+    "location": "Rajshahi, Bangladesh",
+    "image": "https://images.pexels.com/photos/2895831/pexels-photo-2895831.jpeg",
+    "rating": 4.8,
+    "admissionStart": "01 Jan 2025",
+    "admissionEnd": "28 Feb 2025",
+    "researchCount": 150,
+    "events": ["Hackathon", "Robotics Championship"],
+    "sports": ["Cricket", "Basketball", "Gym"]
+  },
 
-    {
-      "id": "city-premier-science-college",
-      "name": "City Premier Science College",
-      "location": "Chattogram, Bangladesh",
-      "rating": 4.5,
-      "coverImage": "https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg",
-      "images": [
-        "https://images.pexels.com/photos/2895831/pexels-photo-2895831.jpeg",
-        "https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg"
-      ],
-      "admission": {
-        "session": "2025-2026",
-        "startDate": "01 Apr 2025",
-        "endDate": "20 May 2025",
-        "defaultAdmissionDate": "05 Apr 2025",
-        "process": [
-          "Register with email and phone.",
-          "Choose science stream and medium.",
-          "Upload SSC marksheet and photos.",
-          "Confirm application and submit."
-        ]
-      },
-      "stats": {
-        "researchCount": 85
-      },
-      "researchWorks": [
-        {
-          "id": "city-r1",
-          "title": "Advancements in Renewable Energy Research",
-          "year": 2024,
-          "summary": "Optimizing solar and wind energy usage.",
-          "link": "#"
-        }
-      ],
-      "events": [
-        "Science Fair",
-        "Physics Olympiad",
-        "Robotics Expo"
-      ],
-      "sports": [
-        "Basketball",
-        "Swimming",
-        "Table Tennis"
-      ]
-    },
+  {
+    "id": "sunrise-law-college",
+    "name": "Sunrise Law College",
+    "location": "Barishal, Bangladesh",
+    "image": "https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg",
+    "rating": 4.1,
+    "admissionStart": "12 Feb 2025",
+    "admissionEnd": "10 Apr 2025",
+    "researchCount": 55,
+    "events": ["Moot Court Competition", "Legal Awareness Week"],
+    "sports": ["Badminton", "Chess"]
+  },
+  {
+    "id": "evergreen-agriculture-university",
+    "name": "Evergreen Agriculture University",
+    "location": "Mymensingh, Bangladesh",
+    "image": "https://images.pexels.com/photos/3185489/pexels-photo-3185489.jpeg",
+    "rating": 4.4,
+    "admissionStart": "05 Feb 2025",
+    "admissionEnd": "22 Mar 2025",
+    "researchCount": 90,
+    "events": ["Agro Tech Expo", "Research Innovation Day"],
+    "sports": ["Cricket", "Volleyball"]
+  },
+  {
+    "id": "bright-future-commerce-college",
+    "name": "Bright Future Commerce College",
+    "location": "Feni, Bangladesh",
+    "image": "https://images.pexels.com/photos/3182753/pexels-photo-3182753.jpeg",
+    "rating": 4.0,
+    "admissionStart": "08 Feb 2025",
+    "admissionEnd": "18 Mar 2025",
+    "researchCount": 40,
+    "events": ["Business Idea Contest", "Accountancy Olympiad"],
+    "sports": ["Football", "Indoor Games"]
+  },
+  {
+    "id": "royal-institute-of-technology",
+    "name": "Royal Institute of Technology",
+    "location": "Dhaka, Bangladesh",
+    "image": "https://images.pexels.com/photos/256400/pexels-photo-256400.jpeg",
+    "rating": 4.9,
+    "admissionStart": "10 Jan 2025",
+    "admissionEnd": "15 Mar 2025",
+    "researchCount": 200,
+    "events": ["Tech Expo", "AI Conference"],
+    "sports": ["Basketball", "Gym", "Cricket"]
+  },
 
-    {
-      "id": "national-arts-media-college",
-      "name": "National Arts & Media College",
-      "location": "Dhaka, Bangladesh",
-      "rating": 4.3,
-      "coverImage": "https://images.pexels.com/photos/1184580/pexels-photo-1184580.jpeg",
-      "images": [
-        "https://images.pexels.com/photos/1184581/pexels-photo-1184581.jpeg"
-      ],
-      "admission": {
-        "session": "2025-2026",
-        "startDate": "10 Jan 2025",
-        "endDate": "10 Mar 2025",
-        "defaultAdmissionDate": "20 Jan 2025",
-        "process": [
-          "Submit online portfolio.",
-          "Fill media & arts program form.",
-          "Upload academic records.",
-          "Appear for online interview/audition."
-        ]
-      },
-      "stats": {
-        "researchCount": 60
-      },
-      "researchWorks": [
-        {
-          "id": "arts-r1",
-          "title": "Media Consumption Pattern of Gen-Z",
-          "year": 2023,
-          "summary": "Study on short-form content platforms and attention span.",
-          "link": "#"
-        }
-      ],
-      "events": [
-        "Film Festival",
-        "Cultural Week"
-      ],
-      "sports": [
-        "Indoor Games",
-        "Badminton"
-      ]
-    }
-  ],
+  {
+    "id": "silverline-nursing-college",
+    "name": "Silverline Nursing College",
+    "location": "Sylhet, Bangladesh",
+    "image": "https://images.pexels.com/photos/263337/pexels-photo-263337.jpeg",
+    "rating": 4.3,
+    "admissionStart": "15 Mar 2025",
+    "admissionEnd": "25 Apr 2025",
+    "researchCount": 65,
+    "events": ["Health Awareness Camp", "Nursing Workshop"],
+    "sports": ["Table Tennis", "Indoor Games"]
+  },
+  {
+    "id": "global-tourism-institute",
+    "name": "Global Tourism Institute",
+    "location": "Cox's Bazar, Bangladesh",
+    "image": "https://images.pexels.com/photos/2583852/pexels-photo-2583852.jpeg",
+    "rating": 4.2,
+    "admissionStart": "10 Feb 2025",
+    "admissionEnd": "20 Apr 2025",
+    "researchCount": 48,
+    "events": ["Tourism Expo", "Photography Contest"],
+    "sports": ["Beach Volleyball", "Swimming"]
+  },
+  {
+    "id": "city-dental-college",
+    "name": "City Dental College",
+    "location": "Dhaka, Bangladesh",
+    "image": "https://images.pexels.com/photos/3845761/pexels-photo-3845761.jpeg",
+    "rating": 4.6,
+    "admissionStart": "01 Feb 2025",
+    "admissionEnd": "30 Mar 2025",
+    "researchCount": 110,
+    "events": ["Dental Hygiene Workshop", "Free Checkup Camp"],
+    "sports": ["Cricket", "Badminton"]
+  },
+  {
+    "id": "modern-fashion-institute",
+    "name": "Modern Fashion Institute",
+    "location": "Dhaka, Bangladesh",
+    "image": "https://images.pexels.com/photos/256625/pexels-photo-256625.jpeg",
+    "rating": 4.0,
+    "admissionStart": "18 Feb 2025",
+    "admissionEnd": "30 Apr 2025",
+    "researchCount": 52,
+    "events": ["Fashion Show", "Design Exhibition"],
+    "sports": ["Indoor Games"]
+  },
+
+  {
+    "id": "future-computer-college",
+    "name": "Future Computer College",
+    "location": "Gazipur, Bangladesh",
+    "image": "https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg",
+    "rating": 4.5,
+    "admissionStart": "05 Jan 2025",
+    "admissionEnd": "15 Feb 2025",
+    "researchCount": 130,
+    "events": ["Programming Contest", "Robotics Day"],
+    "sports": ["Football", "Cricket"]
+  },
+  {
+    "id": "bright-minds-language-institute",
+    "name": "Bright Minds Language Institute",
+    "location": "Dhaka, Bangladesh",
+    "image": "https://images.pexels.com/photos/1595421/pexels-photo-1595421.jpeg",
+    "rating": 4.1,
+    "admissionStart": "12 Feb 2025",
+    "admissionEnd": "10 Mar 2025",
+    "researchCount": 25,
+    "events": ["Spelling Bee", "Public Speaking Contest"],
+    "sports": ["Indoor Games"]
+  },
+  {
+    "id": "national-pharmacy-institute",
+    "name": "National Pharmacy Institute",
+    "location": "Mymensingh, Bangladesh",
+    "image": "https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg",
+    "rating": 4.4,
+    "admissionStart": "15 Jan 2025",
+    "admissionEnd": "28 Feb 2025",
+    "researchCount": 98,
+    "events": ["Pharmacy Expo", "Drug Awareness Program"],
+    "sports": ["Table Tennis", "Cricket"]
+  },
+  {
+    "id": "dynamic-engineering-institute",
+    "name": "Dynamic Engineering Institute",
+    "location": "Cumilla, Bangladesh",
+    "image": "https://images.pexels.com/photos/3862382/pexels-photo-3862382.jpeg",
+    "rating": 4.7,
+    "admissionStart": "10 Jan 2025",
+    "admissionEnd": "12 Mar 2025",
+    "researchCount": 142,
+    "events": ["Tech Meetup", "Hardware Expo"],
+    "sports": ["Basketball", "Gym"]
+  },
+  {
+    "id": "city-hotel-management-institute",
+    "name": "City Hotel Management Institute",
+    "location": "Chattogram, Bangladesh",
+    "image": "https://images.pexels.com/photos/2049422/pexels-photo-2049422.jpeg",
+    "rating": 4.2,
+    "admissionStart": "18 Feb 2025",
+    "admissionEnd": "30 Apr 2025",
+    "researchCount": 60,
+    "events": ["Cooking Competition", "Hospitality Expo"],
+    "sports": ["Indoor Games"]
+  }
+]
+,
 
   "researchPapers": [
     {

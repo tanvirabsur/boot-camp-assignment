@@ -1,81 +1,15 @@
-// src/pages/AllCollegesPage.jsx
+import Loading from "../Components/Loading";
+import useFetch from "../Hooks/useFetch";
 
-const colleges = [
-  {
-    id: "horizon-international-college",
-    name: "Horizon International College",
-    location: "Dhaka, Bangladesh",
-    image: "https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg",
-    rating: 4.7,
-    admissionStart: "15 Feb 2025",
-    admissionEnd: "30 Mar 2025",
-    researchCount: 120,
-    events: ["Annual TechFest", "Innovation Challenge", "Robotics Expo"],
-    sports: ["Football", "Cricket", "Basketball"],
-  },
-  {
-    id: "city-premier-science-college",
-    name: "City Premier Science College",
-    location: "Chattogram, Bangladesh",
-    image: "https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg",
-    rating: 4.5,
-    admissionStart: "01 Apr 2025",
-    admissionEnd: "20 May 2025",
-    researchCount: 85,
-    events: ["Science Fair", "Physics Olympiad"],
-    sports: ["Basketball", "Swimming"],
-  },
-  {
-    id: "national-arts-media-college",
-    name: "National Arts & Media College",
-    location: "Dhaka, Bangladesh",
-    image: "https://images.pexels.com/photos/1184580/pexels-photo-1184580.jpeg",
-    rating: 4.3,
-    admissionStart: "10 Jan 2025",
-    admissionEnd: "10 Mar 2025",
-    researchCount: 60,
-    events: ["Film Festival", "Cultural Week"],
-    sports: ["Badminton", "Indoor Games"],
-  },
-  {
-    id: "south-valley-medical-institute",
-    name: "South Valley Medical Institute",
-    location: "Sylhet, Bangladesh",
-    image: "https://images.pexels.com/photos/256455/pexels-photo-256455.jpeg",
-    rating: 4.6,
-    admissionStart: "05 Mar 2025",
-    admissionEnd: "25 Apr 2025",
-    researchCount: 95,
-    events: ["Medical Camp", "Health Awareness Week"],
-    sports: ["Cricket", "Table Tennis"],
-  },
-  {
-    id: "greenfield-business-college",
-    name: "Greenfield Business College",
-    location: "Khulna, Bangladesh",
-    image: "https://images.pexels.com/photos/256540/pexels-photo-256540.jpeg",
-    rating: 4.2,
-    admissionStart: "20 Feb 2025",
-    admissionEnd: "15 Apr 2025",
-    researchCount: 70,
-    events: ["Startup Summit", "Case Competition"],
-    sports: ["Football", "Indoor Games"],
-  },
-  {
-    id: "northern-engineering-university",
-    name: "Northern Engineering University",
-    location: "Rajshahi, Bangladesh",
-    image: "https://images.pexels.com/photos/2895831/pexels-photo-2895831.jpeg",
-    rating: 4.8,
-    admissionStart: "01 Jan 2025",
-    admissionEnd: "28 Feb 2025",
-    researchCount: 150,
-    events: ["Hackathon", "Robotics Championship"],
-    sports: ["Cricket", "Basketball", "Gym"],
-  },
-];
 
 export default function AllCollegesPage() {
+
+  const {data} = useFetch('/dataOfclg.json')
+  console.log(data.colleges);
+
+  if (!data?.colleges) return <Loading />;
+
+  
   return (
     <div className="min-h-screen bg-slate-50 py-12">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
@@ -92,7 +26,7 @@ export default function AllCollegesPage() {
 
         {/* Card Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {colleges.map((college) => (
+          {data?.colleges?.map((college) => (
             <CollegeCard key={college.id} college={college} />
           ))}
         </div>
@@ -105,7 +39,7 @@ function CollegeCard({ college }) {
   return (
     <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition">
       {/* Image */}
-      <div className="relative `aspect-[4/3]` overflow-hidden">
+      <div className="relative aspect-[4/3] overflow-hidden">
         <img
           src={college.image}
           alt={college.name}
