@@ -1,17 +1,28 @@
+import { useParams } from "react-router";
+import useFetch from "../Hooks/useFetch";
+import Loading from "./Loading";
+
 // src/pages/CollegeDetailsPage.jsx
 export default function CollegeDetails() {
+  const { id } = useParams();
+
+  const {data} = useFetch('/dataOfclg.json');
+  const clg = data?.colleges?.find(college => college.id === id);
+
+  if (!clg) return <Loading />;
+  console.log(clg);
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Cover Image */}
       <div className="h-60 w-full overflow-hidden relative">
         <img
-          src="https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg"
+          src={clg.image || 'https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg'}
           alt="College"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <h1 className="text-3xl md:text-4xl font-bold text-white drop-shadow-xl">
-            Horizon International College
+            {clg?.name || 'College Name'}
           </h1>
         </div>
       </div>
@@ -20,10 +31,10 @@ export default function CollegeDetails() {
         {/* Basic Info */}
         <div className="mb-10">
           <h2 className="text-xl font-semibold text-slate-800 mb-2">
-            📍 Location: <span className="font-normal">Dhaka, Bangladesh</span>
+            📍 Location: <span className="font-normal">{clg?.location || 'Location'}</span>
           </h2>
           <p className="text-slate-600 text-sm">
-            ⭐ Rating: <span className="font-medium">4.7 / 5.0</span>
+            ⭐ Rating: <span className="font-medium">{clg?.rating?.toFixed(1) || '4.7'} / 5.0</span>
           </p>
         </div>
 
@@ -66,13 +77,13 @@ export default function CollegeDetails() {
               <span className="font-semibold text-slate-800">
                 Admission Start:
               </span>{" "}
-              15 Feb 2025
+              {clg?.admissionStart || '01 Jan 2025'}
             </p>
             <p className="text-sm text-slate-600 mb-4">
               <span className="font-semibold text-slate-800">
                 Admission End:
               </span>{" "}
-              30 Mar 2025
+              {clg?.admissionEnd || '31 Mar 2025'}
             </p>
 
             <h4 className="font-semibold text-slate-700 mb-2">
@@ -96,10 +107,7 @@ export default function CollegeDetails() {
 
           <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
             <ul className="list-disc list-inside text-slate-600 text-sm space-y-1">
-              <li>Annual TechFest - showcasing student innovation</li>
-              <li>Sports Week (Football, Cricket, Basketball)</li>
-              <li>Intercollege Coding Challenge</li>
-              <li>Robotics Expo</li>
+              {clg?.events?.map((event, index) => <li key={index}>{event}</li>)}
             </ul>
           </div>
         </div>
@@ -128,10 +136,7 @@ export default function CollegeDetails() {
 
           <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
             <ul className="list-disc list-inside text-slate-600 text-sm space-y-1">
-              <li>Football Ground</li>
-              <li>Cricket Stadium</li>
-              <li>Indoor Badminton Court</li>
-              <li>Fitness and Gym Center</li>
+              {clg?.sports?.map((sport, index) =>  <li key={index}>{sport}</li>)}
             </ul>
           </div>
         </div>

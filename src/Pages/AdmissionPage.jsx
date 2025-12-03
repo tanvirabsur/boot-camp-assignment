@@ -12,6 +12,18 @@ const colleges = [
 export default function AdmissionPage() {
   const [selectedCollege, setSelectedCollege] = useState(colleges[0]);
 
+  const submit =(e)=> {
+     e.preventDefault();
+      // form submission logic here
+    const formdata = new FormData(e.target);
+    const user = Object.fromEntries(formdata.entries())
+
+    console.log(user);
+
+  }
+   
+  
+
   return (
     <div className="min-h-screen bg-slate-50 py-12">
       <div className="max-w-5xl mx-auto px-4 md:px-6">
@@ -58,7 +70,7 @@ export default function AdmissionPage() {
             Candidate Information
           </h2>
 
-          <form className="space-y-4">
+          <form onSubmit={submit} className="space-y-4">
             {/* Candidate Name */}
             <div className="grid gap-2 md:grid-cols-2">
               <div>
@@ -68,6 +80,7 @@ export default function AdmissionPage() {
                 <input
                   type="text"
                   placeholder="Enter your full name"
+                  name="candidateName"
                   className="w-full rounded-lg border border-slate-200 bg-slate-50 p-2.5 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
@@ -80,6 +93,7 @@ export default function AdmissionPage() {
                 <input
                   type="text"
                   placeholder="e.g. Computer Science & Engineering"
+                  name="subject"
                   className="w-full rounded-lg border border-slate-200 bg-slate-50 p-2.5 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
@@ -94,6 +108,7 @@ export default function AdmissionPage() {
                 <input
                   type="email"
                   placeholder="example@email.com"
+                  name="candidateEmail"
                   className="w-full rounded-lg border border-slate-200 bg-slate-50 p-2.5 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
@@ -105,6 +120,7 @@ export default function AdmissionPage() {
                 <input
                   type="tel"
                   placeholder="+8801XXXXXXXXX"
+                  name="candidatePhone"
                   className="w-full rounded-lg border border-slate-200 bg-slate-50 p-2.5 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
@@ -118,6 +134,7 @@ export default function AdmissionPage() {
               <textarea
                 rows="3"
                 placeholder="Present address (Area, City, Country)"
+                name="address"
                 className="w-full rounded-lg border border-slate-200 bg-slate-50 p-2.5 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               ></textarea>
             </div>
@@ -130,6 +147,7 @@ export default function AdmissionPage() {
                 </label>
                 <input
                   type="date"
+                  name="dateOfBirth"
                   className="w-full rounded-lg border border-slate-200 bg-slate-50 p-2.5 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
@@ -140,6 +158,7 @@ export default function AdmissionPage() {
                 </label>
                 <input
                   type="file"
+                  name="candidateImage"
                   className="w-full rounded-lg border border-dashed border-slate-300 bg-slate-50 p-2.5 text-xs text-slate-500 file:mr-3 file:rounded-md file:border-0 file:bg-indigo-600 file:px-3 file:py-1.5 file:text-xs file:font-medium file:text-white hover:file:bg-indigo-700"
                 />
                 <p className="mt-1 text-[11px] text-slate-400">
@@ -151,7 +170,7 @@ export default function AdmissionPage() {
             {/* Submit */}
             <div className="flex justify-end pt-2">
               <button
-                type="button"
+                type="submit"
                 className="rounded-lg bg-indigo-600 px-5 py-2 text-sm font-medium text-white hover:bg-indigo-700 transition"
               >
                 Submit Application
