@@ -3,6 +3,11 @@ import App from "../App";
 import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import CollegeDetails from "../Components/CollegeDetails";
+import NotFoundPage from "../Pages/NotFoundPage";
+import AllCollegesPage from "../Pages/AllCollegesPage";
+import MyCollegePage from "../Pages/MyCollegePage";
+import AdmissionPage from "../Pages/AdmissionPage";
 
 const Router = createBrowserRouter([
     {
@@ -14,12 +19,32 @@ const Router = createBrowserRouter([
                 Component: Home
             },
             {
+                path: '/colleges/:id',
+                Component: CollegeDetails
+            },
+            {
                 path: '/login',
                 Component: Login
             },
             {
                 path: '/register',
                 Component: Register
+            },
+            {
+                path: '/colleges',
+                Component: AllCollegesPage
+            },
+            {
+                path: '/admission',
+                Component: AdmissionPage
+            },
+            {
+                path: '/my-college',
+                Component: MyCollegePage
+            },
+            {
+                path: '*',
+                Component: NotFoundPage
             }
         ]
     }
