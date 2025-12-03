@@ -1,0 +1,240 @@
+{
+  "colleges": [
+    {
+      "id": "horizon-international-college",
+      "name": "Horizon International College",
+      "location": "Dhaka, Bangladesh",
+      "rating": 4.7,
+      "coverImage": "https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg",
+      "images": [
+        "https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg",
+        "https://images.pexels.com/photos/256455/pexels-photo-256455.jpeg",
+        "https://images.pexels.com/photos/3259629/pexels-photo-3259629.jpeg"
+      ],
+      "admission": {
+        "session": "2025-2026",
+        "startDate": "15 Feb 2025",
+        "endDate": "30 Mar 2025",
+        "defaultAdmissionDate": "18 Feb 2025",
+        "process": [
+          "Create an account on CampusBook platform.",
+          "Fill out the admission application form.",
+          "Upload academic documents & photo.",
+          "Select department and confirm choices.",
+          "Complete payment via online gateway."
+        ]
+      },
+      "stats": {
+        "researchCount": 120
+      },
+      "researchWorks": [
+        {
+          "id": "horizon-r1",
+          "title": "AI-based Student Performance Prediction",
+          "year": 2024,
+          "summary": "Using machine learning models to predict student results.",
+          "link": "#"
+        },
+        {
+          "id": "horizon-r2",
+          "title": "Robotics for Smart Farming",
+          "year": 2023,
+          "summary": "Autonomous robots to support large-scale farming.",
+          "link": "#"
+        }
+      ],
+      "events": [
+        "Annual TechFest",
+        "Innovation Challenge",
+        "Robotics Expo",
+        "Cultural Night"
+      ],
+      "sports": [
+        "Football",
+        "Cricket",
+        "Basketball",
+        "Badminton",
+        "Gym & Fitness Center"
+      ]
+    },
+
+    {
+      "id": "city-premier-science-college",
+      "name": "City Premier Science College",
+      "location": "Chattogram, Bangladesh",
+      "rating": 4.5,
+      "coverImage": "https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg",
+      "images": [
+        "https://images.pexels.com/photos/2895831/pexels-photo-2895831.jpeg",
+        "https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg"
+      ],
+      "admission": {
+        "session": "2025-2026",
+        "startDate": "01 Apr 2025",
+        "endDate": "20 May 2025",
+        "defaultAdmissionDate": "05 Apr 2025",
+        "process": [
+          "Register with email and phone.",
+          "Choose science stream and medium.",
+          "Upload SSC marksheet and photos.",
+          "Confirm application and submit."
+        ]
+      },
+      "stats": {
+        "researchCount": 85
+      },
+      "researchWorks": [
+        {
+          "id": "city-r1",
+          "title": "Advancements in Renewable Energy Research",
+          "year": 2024,
+          "summary": "Optimizing solar and wind energy usage.",
+          "link": "#"
+        }
+      ],
+      "events": [
+        "Science Fair",
+        "Physics Olympiad",
+        "Robotics Expo"
+      ],
+      "sports": [
+        "Basketball",
+        "Swimming",
+        "Table Tennis"
+      ]
+    },
+
+    {
+      "id": "national-arts-media-college",
+      "name": "National Arts & Media College",
+      "location": "Dhaka, Bangladesh",
+      "rating": 4.3,
+      "coverImage": "https://images.pexels.com/photos/1184580/pexels-photo-1184580.jpeg",
+      "images": [
+        "https://images.pexels.com/photos/1184581/pexels-photo-1184581.jpeg"
+      ],
+      "admission": {
+        "session": "2025-2026",
+        "startDate": "10 Jan 2025",
+        "endDate": "10 Mar 2025",
+        "defaultAdmissionDate": "20 Jan 2025",
+        "process": [
+          "Submit online portfolio.",
+          "Fill media & arts program form.",
+          "Upload academic records.",
+          "Appear for online interview/audition."
+        ]
+      },
+      "stats": {
+        "researchCount": 60
+      },
+      "researchWorks": [
+        {
+          "id": "arts-r1",
+          "title": "Media Consumption Pattern of Gen-Z",
+          "year": 2023,
+          "summary": "Study on short-form content platforms and attention span.",
+          "link": "#"
+        }
+      ],
+      "events": [
+        "Film Festival",
+        "Cultural Week"
+      ],
+      "sports": [
+        "Indoor Games",
+        "Badminton"
+      ]
+    }
+  ],
+
+  "researchPapers": [
+    {
+      "id": "rp-1",
+      "collegeId": "horizon-international-college",
+      "title": "AI-Powered Student Performance Prediction",
+      "author": "Dept. of CSE - Horizon College",
+      "year": 2024,
+      "link": "#"
+    },
+    {
+      "id": "rp-2",
+      "collegeId": "city-premier-science-college",
+      "title": "Impact of Sports on Academic Growth",
+      "author": "Dept. of Sports Science - City Premier",
+      "year": 2023,
+      "link": "#"
+    },
+    {
+      "id": "rp-3",
+      "collegeId": "national-arts-media-college",
+      "title": "Modern Storytelling in Short-Form Video",
+      "author": "Media Dept. - National Arts",
+      "year": 2022,
+      "link": "#"
+    }
+  ],
+
+  "galleryImages": [
+    {
+      "id": "g-1",
+      "collegeId": "horizon-international-college",
+      "title": "Computer Science Graduates - 2024",
+      "src": "https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg"
+    },
+    {
+      "id": "g-2",
+      "collegeId": "city-premier-science-college",
+      "title": "Convocation Day Celebration",
+      "src": "https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg"
+    },
+    {
+      "id": "g-3",
+      "collegeId": "national-arts-media-college",
+      "title": "Graduates Group Photo",
+      "src": "https://images.pexels.com/photos/1184581/pexels-photo-1184581.jpeg"
+    }
+  ],
+
+  "reviews": [
+    {
+      "id": "rev-1",
+      "collegeId": "horizon-international-college",
+      "reviewerName": "Ayesha Rahman",
+      "rating": 5,
+      "text": "Amazing academic support and research opportunities!",
+      "avatarUrl": "https://i.pravatar.cc/100?img=47",
+      "createdAt": "2025-02-10"
+    },
+    {
+      "id": "rev-2",
+      "collegeId": "city-premier-science-college",
+      "reviewerName": "Md. Nawaz Karim",
+      "rating": 4,
+      "text": "Great labs and sports facilities. Loved studying here.",
+      "avatarUrl": "https://i.pravatar.cc/100?img=52",
+      "createdAt": "2025-02-12"
+    },
+    {
+      "id": "rev-3",
+      "collegeId": "national-arts-media-college",
+      "reviewerName": "Sadia Jahan",
+      "rating": 4,
+      "text": "Creative campus with lots of cultural events!",
+      "avatarUrl": "https://i.pravatar.cc/100?img=32",
+      "createdAt": "2025-02-15"
+    }
+  ],
+
+  "currentUser": {
+    "id": "user-1",
+    "name": "Tanvir Absar",
+    "email": "tanvir@example.com",
+    "phone": "+8801XXXXXXXXX",
+    "address": "Mirpur, Dhaka",
+    "dob": "2003-06-12",
+    "subject": "Computer Science & Engineering",
+    "admittedCollegeId": "horizon-international-college",
+    "admissionDate": "18 Feb 2025"
+  }
+}

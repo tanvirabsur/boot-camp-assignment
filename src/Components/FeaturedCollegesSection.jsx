@@ -121,7 +121,7 @@ function CollegeCard({ college }) {
   return (
     <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition">
       {/* Image */}
-      <div className="relative `aspect-[4/3]` overflow-hidden">
+      <div className="relative aspect-[4/3] overflow-hidden">
         <img
           src={college.image}
           alt={college.name}

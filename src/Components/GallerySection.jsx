@@ -1,45 +1,6 @@
-// src/components/GallerySection.jsx
 
-const galleryImages = [
-  {
-    id: 1,
-    title: "Computer Science Graduates - 2024",
-    college: "Horizon International College",
-    src: "https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg",
-  },
-  {
-    id: 2,
-    title: "Convocation Day Celebration",
-    college: "City Premier Science College",
-    src: "https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg",
-  },
-  {
-    id: 3,
-    title: "Graduates Group Photo",
-    college: "National Arts & Media College",
-    src: "https://images.pexels.com/photos/1184581/pexels-photo-1184581.jpeg",
-  },
-  {
-    id: 4,
-    title: "Final Year Batch",
-    college: "South Valley Medical Institute",
-    src: "https://images.pexels.com/photos/2678858/pexels-photo-2678858.jpeg",
-  },
-  {
-    id: 5,
-    title: "Campus Farewell Moment",
-    college: "City Premier Science College",
-    src: "https://images.pexels.com/photos/901964/pexels-photo-901964.jpeg",
-  },
-  {
-    id: 6,
-    title: "Graduation Ceremony",
-    college: "Horizon International College",
-    src: "https://images.pexels.com/photos/2678857/pexels-photo-2678857.jpeg",
-  },
-];
-
-export default function GallerySection() {
+export default function GallerySection({galleryImages}) {
+  console.log(galleryImages);
   return (
     <section
       id="gallery"
@@ -89,11 +50,6 @@ export default function GallerySection() {
             </div>
           ))}
         </div>
-
-        {/* Small note */}
-        <p className="mt-6 text-center text-xs text-slate-400">
-          *All photos are sample placeholders. Replace them with real college gallery images.
-        </p>
       </div>
     </section>
   );

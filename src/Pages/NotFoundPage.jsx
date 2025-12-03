@@ -2,7 +2,7 @@
 
 export default function NotFoundPage() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-950 px-4 text-center relative overflow-hidden">
+    <div className="min-h-screen flex flex-col items-center justify-center `bg-gradient-to-br` from-slate-900 via-indigo-900 to-slate-950 px-4 text-center relative overflow-hidden">
 
       {/* Floating circles (background effects) */}
       <div className="absolute -top-20 -left-20 h-60 w-60 bg-indigo-500/30 rounded-full blur-3xl animate-pulse"></div>

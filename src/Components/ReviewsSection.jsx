@@ -1,38 +1,7 @@
-// src/components/ReviewsSection.jsx
-const reviewsData = [
-  {
-    id: 1,
-    reviewer: "Ayesha Rahman",
-    college: "Horizon International College",
-    rating: 5,
-    review:
-      "Amazing academic support and research opportunities! Teachers are very friendly, and the admission process was super smooth.",
-    image:
-      "https://i.pravatar.cc/100?img=47",
-  },
-  {
-    id: 2,
-    reviewer: "Md. Nawaz Karim",
-    college: "City Premier Science College",
-    rating: 4,
-    review:
-      "Excellent sports facilities. The science labs are well maintained. I enjoyed my first year a lot.",
-    image:
-      "https://i.pravatar.cc/100?img=52",
-  },
-  {
-    id: 3,
-    reviewer: "Sadia Jahan",
-    college: "National Arts & Media College",
-    rating: 4,
-    review:
-      "Creative environment with lots of cultural events. Perfect for media & design students!",
-    image:
-      "https://i.pravatar.cc/100?img=32",
-  },
-];
 
-export default function ReviewsSection() {
+export default function ReviewsSection({reviews}) {
+
+  
   return (
     <section
       id="reviews"
@@ -51,7 +20,7 @@ export default function ReviewsSection() {
 
         {/* Reviews Grid */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {reviewsData.map((review) => (
+          {reviews?.map((review) => (
             <div
               key={review.id}
               className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-lg transition"
@@ -59,15 +28,15 @@ export default function ReviewsSection() {
               {/* Profile */}
               <div className="flex items-center gap-4 mb-4">
                 <img
-                  src={review.image}
-                  alt={review.reviewer}
+                  src={review.avatarUrl}
+                  alt={review.reviewerName}
                   className="h-12 w-12 rounded-full object-cover border border-slate-200"
                 />
                 <div>
                   <h4 className="font-medium text-slate-800">
-                    {review.reviewer}
+                    {review.reviewerName}
                   </h4>
-                  <p className="text-xs text-slate-500">{review.college}</p>
+                  <p className="text-xs text-slate-500">{review.collegeId}</p>
                 </div>
               </div>
 
@@ -87,7 +56,7 @@ export default function ReviewsSection() {
 
               {/* Review text */}
               <p className="text-sm text-slate-600 leading-relaxed">
-                {review.review}
+                {review.text}
               </p>
             </div>
           ))}

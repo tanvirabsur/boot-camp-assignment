@@ -1,36 +1,5 @@
-// src/components/ResearchSection.jsx
-const researchPapers = [
-  {
-    id: 1,
-    title: "AI-Powered Student Performance Prediction",
-    author: "Dept. of Computer Science - Horizon College",
-    year: 2024,
-    link: "#",
-  },
-  {
-    id: 2,
-    title: "Impact of Sports on Academic Growth",
-    author: "National Arts & Media College",
-    year: 2023,
-    link: "#",
-  },
-  {
-    id: 3,
-    title: "Advancements in Renewable Energy Research",
-    author: "City Premier Science College",
-    year: 2024,
-    link: "#",
-  },
-  {
-    id: 4,
-    title: "Modern Approaches of Mental Health in University Students",
-    author: "South Valley Medical Institute",
-    year: 2022,
-    link: "#",
-  },
-];
   
-export default function ResearchSection() {
+export default function ResearchSection({ researchPapers }) {
   return (
     <section id="research" className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
