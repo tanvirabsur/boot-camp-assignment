@@ -1,10 +1,15 @@
 // src/pages/LoginPage.jsx
 
-export default function Login() {
+import { use } from "react";
+import { AuthContext } from "../Hooks/AuthProvider";
+import { Navigate, useNavigate } from "react-router";
 
-  const loginForm =(e)=> {
-     e.preventDefault();
-      // form submission logic here
+export default function Login() {
+  const { signinWithGoogle } = use(AuthContext)
+  const navigate = useNavigate()
+  const loginForm = (e) => {
+    e.preventDefault();
+    // form submission logic here
     const formdata = new FormData(e.target);
     const user = Object.fromEntries(formdata.entries())
 
@@ -15,7 +20,7 @@ export default function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 px-4">
       <div className="w-full max-w-md bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl">
-        
+
         {/* Logo */}
         <div className="text-center mb-6">
           <div className="flex items-center justify-center gap-2 mb-2">
@@ -80,7 +85,13 @@ export default function Login() {
         {/* Social Login Buttons */}
         <div className="space-y-3">
           {/* Google */}
-          <button className="w-full flex items-center justify-center gap-2 bg-white text-slate-900 rounded-lg py-2.5 text-sm font-medium hover:bg-slate-100 transition">
+          <button onClick={() => {
+            signinWithGoogle()
+              .then(() => {
+                console.log('Google Signin successful');
+                navigate('/');
+              })
+          }} className="w-full flex items-center justify-center gap-2 bg-white text-slate-900 rounded-lg py-2.5 text-sm font-medium hover:bg-slate-100 transition">
             <img
               src="https://www.svgrepo.com/show/475656/google-color.svg"
               alt="Google"

@@ -9,6 +9,7 @@ import AllCollegesPage from "../Pages/AllCollegesPage";
 import MyCollegePage from "../Pages/MyCollegePage";
 import AdmissionPage from "../Pages/AdmissionPage";
 import PrivateRoute from "../Hooks/PrivateRoute";
+import ProfilePage from "../Pages/ProfilePage";
 
 const Router = createBrowserRouter([
     {
@@ -38,6 +39,10 @@ const Router = createBrowserRouter([
             {
                 path: '/admission',
                 Component: AdmissionPage
+            },
+            {
+                path: '/profile',
+                element: <ProfilePage />
             },
             {
                 path: '/my-college',

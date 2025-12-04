@@ -1,10 +1,13 @@
 // src/components/Navbar.jsx
-import { useState } from "react";
+import { use, useState } from "react";
+import { AuthContext } from "../Hooks/AuthProvider";
 // jodi React Router use koro: import { Link, NavLink } from "react-router-dom";
 
-export default function NavBar({ isAuthenticated, userName }) {
+export default function NavBar({ userName }) {
   const [isOpen, setIsOpen] = useState(false);
 
+  const {user} = use(AuthContext)
+ console.log(user);
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Colleges", href: "/colleges" },
@@ -49,7 +52,7 @@ export default function NavBar({ isAuthenticated, userName }) {
 
           {/* Right side: Login/Profile */}
           <div className="flex items-center gap-3">
-            {!isAuthenticated ? (
+            {!user ? (
               <>
                 <a
                   href="/login"
@@ -128,7 +131,7 @@ export default function NavBar({ isAuthenticated, userName }) {
             ))}
 
             <div className="mt-3 flex flex-col gap-2">
-              {!isAuthenticated ? (
+              {!user ? (
                 <>
                   <a
                     href="/login"
