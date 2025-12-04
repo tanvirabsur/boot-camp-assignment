@@ -1,8 +1,19 @@
 // src/pages/LoginPage.jsx
 
 export default function Login() {
+
+  const loginForm =(e)=> {
+     e.preventDefault();
+      // form submission logic here
+    const formdata = new FormData(e.target);
+    const user = Object.fromEntries(formdata.entries())
+
+    console.log(user);
+
+  }
+
   return (
-    <div className="min-h-screen flex items-center justify-center `bg-gradient-to-br` from-slate-900 via-slate-950 to-slate-900 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 px-4">
       <div className="w-full max-w-md bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl">
         
         {/* Logo */}
@@ -17,12 +28,13 @@ export default function Login() {
         </div>
 
         {/* Form */}
-        <form className="space-y-5">
+        <form onSubmit={loginForm} className="space-y-5">
           {/* Email */}
           <div>
             <label className="text-sm text-slate-200">Email</label>
             <input
               type="email"
+              name="email"
               className="mt-2 w-full rounded-lg bg-white/10 border border-white/20 p-3 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
               placeholder="Enter your email"
             />
@@ -33,6 +45,7 @@ export default function Login() {
             <label className="text-sm text-slate-200">Password</label>
             <input
               type="password"
+              name="password"
               className="mt-2 w-full rounded-lg bg-white/10 border border-white/20 p-3 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
               placeholder="Enter your password"
             />
@@ -50,8 +63,8 @@ export default function Login() {
 
           {/* Login Button */}
           <button
-            type="button"
-            className="w-full bg-indigo-600 hover:bg-indigo-700 transition p-3 rounded-lg text-white text-sm font-medium shadow-lg"
+            type="submit"
+            className="w-full cursor-pointer bg-indigo-600 hover:bg-indigo-700 transition p-3 rounded-lg text-white text-sm font-medium shadow-lg"
           >
             Login
           </button>
