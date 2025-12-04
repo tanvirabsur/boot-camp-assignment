@@ -8,6 +8,7 @@ import NotFoundPage from "../Pages/NotFoundPage";
 import AllCollegesPage from "../Pages/AllCollegesPage";
 import MyCollegePage from "../Pages/MyCollegePage";
 import AdmissionPage from "../Pages/AdmissionPage";
+import PrivateRoute from "../Hooks/PrivateRoute";
 
 const Router = createBrowserRouter([
     {
@@ -40,7 +41,10 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/my-college',
-                Component: MyCollegePage
+                element: <PrivateRoute>
+                    <MyCollegePage></MyCollegePage>
+                </PrivateRoute>
+                
             },
             {
                 path: '*',

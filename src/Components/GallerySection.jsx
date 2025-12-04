@@ -1,6 +1,6 @@
 
 export default function GallerySection({galleryImages}) {
-  console.log(galleryImages);
+
   return (
     <section
       id="gallery"
