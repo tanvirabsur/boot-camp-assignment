@@ -1,47 +1,6 @@
 import { useState, useMemo } from "react";
 import CollegeCard from "./CollegeCard";
 
-// const featuredColleges = [
-//   {
-//     id: "horizon",
-//     name: "Horizon International College",
-//     image:
-//       "https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg",
-//     admissionStart: "15 Feb 2025",
-//     admissionEnd: "30 Mar 2025",
-//     events: ["Annual TechFest", "Innovation Challenge"],
-//     researchCount: 120,
-//     researchFocus: "AI, Data Science, Robotics",
-//     sports: ["Football", "Cricket", "Basketball"],
-//     rating: 4.7,
-//   },
-//   {
-//     id: "city-science",
-//     name: "City Premier Science College",
-//     image:
-//       "https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg",
-//     admissionStart: "01 Apr 2025",
-//     admissionEnd: "20 May 2025",
-//     events: ["Science Fair", "Robotics Expo"],
-//     researchCount: 85,
-//     researchFocus: "Physics, Renewable Energy, Chemistry",
-//     sports: ["Basketball", "Swimming"],
-//     rating: 4.5,
-//   },
-//   {
-//     id: "national-arts",
-//     name: "National Arts & Media College",
-//     image:
-//       "https://images.pexels.com/photos/1184580/pexels-photo-1184580.jpeg",
-//     admissionStart: "10 Jan 2025",
-//     admissionEnd: "10 Mar 2025",
-//     events: ["Film Festival", "Cultural Week"],
-//     researchCount: 60,
-//     researchFocus: "Media Studies, Visual Arts, Communication",
-//     sports: ["Indoor Games", "Badminton"],
-//     rating: 4.3,
-//   },
-// ];
 
 export default function FeaturedCollegesSection({ colleges = [] }) {
   const [search, setSearch] = useState("");
@@ -51,17 +10,17 @@ export default function FeaturedCollegesSection({ colleges = [] }) {
     return Array.isArray(colleges) ? colleges.slice(0, 3) : [];
   }, [colleges]);
 
-  // const filteredColleges = useMemo(() => {
-  //   if (!search.trim()) return featuredColleges;
-  //   return featuredColleges.filter((college) =>
-  //     college.name.toLowerCase().includes(search.toLowerCase())
-  //   );
-  // }, [search]);
+  const filteredColleges = useMemo(() => {
+    if (!search.trim()) return featuredColleges;
+    return featuredColleges.filter((college) =>
+      college.name.toLowerCase().includes(search.toLowerCase())
+    );
+  }, [search, featuredColleges]);
 
   return (
     <section
       id="search-college"
-      className="py-16 `bg-gradient-to-b` from-white to-slate-50"
+      className="py-16 bg-gradient-to-b from-white to-slate-50"
     >
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         {/* Heading */}
@@ -106,13 +65,13 @@ export default function FeaturedCollegesSection({ colleges = [] }) {
         </div>
 
         {/* Cards */}
-        {featuredColleges?.length === 0 ? (
+        {filteredColleges?.length === 0 ? (
           <p className="text-center text-sm text-slate-500">
             No college found with this name. Try a different search.
           </p>
         ) : (
           <div className="grid gap-6 md:grid-cols-3">
-            {featuredColleges?.map((college) => (
+            {filteredColleges?.map((college) => (
               <CollegeCard key={college.id} college={college} />
             ))}
           </div>
