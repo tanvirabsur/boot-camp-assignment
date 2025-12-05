@@ -156,7 +156,7 @@ const ProfilePage = () => {
             <div className="mt-10">
               <button 
               onClick={signut}
-              className="w-full py-3 rounded-xl bg-red-500 text-white font-medium hover:bg-red-600 shadow transition">
+              className="w-full py-3 cursor-pointer rounded-xl bg-red-500 text-white font-medium hover:bg-red-600 shadow transition">
                 Logout
               </button>
             </div>
