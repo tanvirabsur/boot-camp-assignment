@@ -5,9 +5,8 @@ import { AuthContext } from "../Hooks/AuthProvider";
 
 export default function NavBar({ userName }) {
   const [isOpen, setIsOpen] = useState(false);
-
   const {user} = use(AuthContext)
- console.log(user);
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Colleges", href: "/colleges" },

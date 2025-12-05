@@ -1,57 +1,62 @@
-// src/components/FeaturedCollegesSection.jsx
 import { useState, useMemo } from "react";
+import CollegeCard from "./CollegeCard";
 
-const featuredColleges = [
-  {
-    id: "horizon",
-    name: "Horizon International College",
-    image:
-      "https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg",
-    admissionStart: "15 Feb 2025",
-    admissionEnd: "30 Mar 2025",
-    events: ["Annual TechFest", "Innovation Challenge"],
-    researchCount: 120,
-    researchFocus: "AI, Data Science, Robotics",
-    sports: ["Football", "Cricket", "Basketball"],
-    rating: 4.7,
-  },
-  {
-    id: "city-science",
-    name: "City Premier Science College",
-    image:
-      "https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg",
-    admissionStart: "01 Apr 2025",
-    admissionEnd: "20 May 2025",
-    events: ["Science Fair", "Robotics Expo"],
-    researchCount: 85,
-    researchFocus: "Physics, Renewable Energy, Chemistry",
-    sports: ["Basketball", "Swimming"],
-    rating: 4.5,
-  },
-  {
-    id: "national-arts",
-    name: "National Arts & Media College",
-    image:
-      "https://images.pexels.com/photos/1184580/pexels-photo-1184580.jpeg",
-    admissionStart: "10 Jan 2025",
-    admissionEnd: "10 Mar 2025",
-    events: ["Film Festival", "Cultural Week"],
-    researchCount: 60,
-    researchFocus: "Media Studies, Visual Arts, Communication",
-    sports: ["Indoor Games", "Badminton"],
-    rating: 4.3,
-  },
-];
+// const featuredColleges = [
+//   {
+//     id: "horizon",
+//     name: "Horizon International College",
+//     image:
+//       "https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg",
+//     admissionStart: "15 Feb 2025",
+//     admissionEnd: "30 Mar 2025",
+//     events: ["Annual TechFest", "Innovation Challenge"],
+//     researchCount: 120,
+//     researchFocus: "AI, Data Science, Robotics",
+//     sports: ["Football", "Cricket", "Basketball"],
+//     rating: 4.7,
+//   },
+//   {
+//     id: "city-science",
+//     name: "City Premier Science College",
+//     image:
+//       "https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg",
+//     admissionStart: "01 Apr 2025",
+//     admissionEnd: "20 May 2025",
+//     events: ["Science Fair", "Robotics Expo"],
+//     researchCount: 85,
+//     researchFocus: "Physics, Renewable Energy, Chemistry",
+//     sports: ["Basketball", "Swimming"],
+//     rating: 4.5,
+//   },
+//   {
+//     id: "national-arts",
+//     name: "National Arts & Media College",
+//     image:
+//       "https://images.pexels.com/photos/1184580/pexels-photo-1184580.jpeg",
+//     admissionStart: "10 Jan 2025",
+//     admissionEnd: "10 Mar 2025",
+//     events: ["Film Festival", "Cultural Week"],
+//     researchCount: 60,
+//     researchFocus: "Media Studies, Visual Arts, Communication",
+//     sports: ["Indoor Games", "Badminton"],
+//     rating: 4.3,
+//   },
+// ];
 
-export default function FeaturedCollegesSection() {
+export default function FeaturedCollegesSection({ colleges = [] }) {
   const [search, setSearch] = useState("");
 
-  const filteredColleges = useMemo(() => {
-    if (!search.trim()) return featuredColleges;
-    return featuredColleges.filter((college) =>
-      college.name.toLowerCase().includes(search.toLowerCase())
-    );
-  }, [search]);
+  // Derive the featured colleges from the `colleges` prop without extra state.
+  const featuredColleges = useMemo(() => {
+    return Array.isArray(colleges) ? colleges.slice(0, 3) : [];
+  }, [colleges]);
+
+  // const filteredColleges = useMemo(() => {
+  //   if (!search.trim()) return featuredColleges;
+  //   return featuredColleges.filter((college) =>
+  //     college.name.toLowerCase().includes(search.toLowerCase())
+  //   );
+  // }, [search]);
 
   return (
     <section
@@ -101,13 +106,13 @@ export default function FeaturedCollegesSection() {
         </div>
 
         {/* Cards */}
-        {filteredColleges.length === 0 ? (
+        {featuredColleges?.length === 0 ? (
           <p className="text-center text-sm text-slate-500">
             No college found with this name. Try a different search.
           </p>
         ) : (
           <div className="grid gap-6 md:grid-cols-3">
-            {filteredColleges.map((college) => (
+            {featuredColleges?.map((college) => (
               <CollegeCard key={college.id} college={college} />
             ))}
           </div>
@@ -117,72 +122,3 @@ export default function FeaturedCollegesSection() {
   );
 }
 
-function CollegeCard({ college }) {
-  return (
-    <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition">
-      {/* Image */}
-      <div className="relative aspect-[4/3] overflow-hidden">
-        <img
-          src={college.image}
-          alt={college.name}
-          className="h-full w-full object-cover transition duration-500 hover:scale-105"
-        />
-        <div className="absolute left-3 top-3 rounded-full bg-black/60 px-2 py-1 text-[10px] font-medium text-yellow-300">
-          ⭐ {college.rating.toFixed(1)} / 5.0
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="flex flex-1 flex-col p-4">
-        <h3 className="text-sm font-semibold text-slate-800 line-clamp-2">
-          {college.name}
-        </h3>
-
-        {/* Admission dates */}
-        <div className="mt-2 rounded-lg bg-slate-50 p-2 text-[11px] text-slate-600">
-          <p className="font-medium text-slate-700">Admission Timeline</p>
-          <p>
-            From: <span className="font-medium">{college.admissionStart}</span>
-          </p>
-          <p>
-            To: <span className="font-medium">{college.admissionEnd}</span>
-          </p>
-        </div>
-
-        {/* Events & Research */}
-        <div className="mt-3 space-y-1.5 text-[11px] text-slate-600">
-          <p>
-            <span className="font-semibold text-slate-700">Events:</span>{" "}
-            {college.events.join(", ")}
-          </p>
-          <p>
-            <span className="font-semibold text-slate-700">
-              Research History:
-            </span>{" "}
-            {college.researchCount}+ projects • {college.researchFocus}
-          </p>
-          <p>
-            <span className="font-semibold text-slate-700">Sports:</span>{" "}
-            {college.sports.join(", ")}
-          </p>
-        </div>
-
-        {/* Actions */}
-        <div className="mt-4 flex items-center justify-between">
-          <a
-            href={`/colleges/${college.id}`}
-            className="text-xs font-medium text-indigo-600 hover:text-indigo-700"
-          >
-            Details →
-          </a>
-          <a
-            href="/admission"
-            className="rounded-full bg-indigo-600 px-3 py-1.5 text-[11px] font-medium text-white hover:bg-indigo-700 transition"
-          >
-            Book Admission
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-}

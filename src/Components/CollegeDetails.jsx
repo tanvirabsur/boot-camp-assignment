@@ -6,7 +6,7 @@ import Loading from "./Loading";
 export default function CollegeDetails() {
   const { id } = useParams();
 
-  const {data} = useFetch('/dataOfclg.json');
+  const { data } = useFetch('/dataOfclg.json');
   const clg = data?.colleges?.find(college => college.id === id);
 
   if (!clg) return <Loading />;
@@ -45,24 +45,16 @@ export default function CollegeDetails() {
           </h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-            <div className="h-40 rounded-xl overflow-hidden">
-              <img
-                src="https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="h-40 rounded-xl overflow-hidden">
-              <img
-                src="https://images.pexels.com/photos/256455/pexels-photo-256455.jpeg"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="h-40 rounded-xl overflow-hidden">
-              <img
-                src="https://images.pexels.com/photos/3259629/pexels-photo-3259629.jpeg"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            {
+              clg.gallery.map((imgUrl, index) => <div key={index} className="h-40 rounded-xl overflow-hidden">
+                <img
+                  src={imgUrl}
+                  className="w-full h-full object-cover"
+                />
+              </div>)
+
+            }
+
           </div>
         </div>
 
@@ -90,11 +82,14 @@ export default function CollegeDetails() {
               Admission Process:
             </h4>
             <ul className="list-disc list-inside text-slate-600 text-sm space-y-1">
+              {
+                clg.admissionProcess.map((step, index) => <li key={index}>{step}</li>)
+              }
               <li>Create an account on the platform</li>
-              <li>Fill out the admission application form</li>
+              {/* <li>Fill out the admission application form</li>
               <li>Upload all required academic documents</li>
               <li>Choose department & submit the form</li>
-              <li>Pay admission fee through online gateway</li>
+              <li>Pay admission fee through online gateway</li> */}
             </ul>
           </div>
         </div>
@@ -136,7 +131,7 @@ export default function CollegeDetails() {
 
           <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
             <ul className="list-disc list-inside text-slate-600 text-sm space-y-1">
-              {clg?.sports?.map((sport, index) =>  <li key={index}>{sport}</li>)}
+              {clg?.sports?.map((sport, index) => <li key={index}>{sport}</li>)}
             </ul>
           </div>
         </div>

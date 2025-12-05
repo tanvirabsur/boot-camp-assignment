@@ -12,10 +12,11 @@ const Home = () => {
 
     if (!data) return <Loading />;
 
+     
     return (
         <>
             <HeroSection />
-            <FeaturedCollegesSection />
+            <FeaturedCollegesSection colleges={data.colleges} />
             <GallerySection galleryImages={data.galleryImages} />
             <ResearchSection researchPapers={data.researchPapers} />
             <ReviewsSection reviews={data.reviews} />
