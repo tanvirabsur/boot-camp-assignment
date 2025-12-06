@@ -8,18 +8,17 @@ import useFetch from '../Hooks/useFetch';
 import Loading from '../Components/Loading';
 
 const Home = () => {
-    const { data } = useFetch('/dataOfclg.json')
+    const { data } = useFetch('http://localhost:8080/colleges')
 
     if (!data) return <Loading />;
 
-     
     return (
         <>
             <HeroSection />
-            <FeaturedCollegesSection colleges={data.colleges} />
-            <GallerySection galleryImages={data.galleryImages} />
-            <ResearchSection researchPapers={data.researchPapers} />
-            <ReviewsSection reviews={data.reviews} />
+            <FeaturedCollegesSection colleges={data[0].colleges} />
+            <GallerySection galleryImages={data[0].galleryImages} />
+            <ResearchSection researchPapers={data[0].researchPapers} />
+            <ReviewsSection reviews={data[0].reviews} />
         </>
     );
 };

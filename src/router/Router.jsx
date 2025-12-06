@@ -34,6 +34,7 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/colleges',
+                loader: ()=> fetch('http://localhost:8080/colleges'),
                 Component: AllCollegesPage
             },
             {

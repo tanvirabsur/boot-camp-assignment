@@ -2,7 +2,7 @@ import React, { use, useState } from "react";
 import { AuthContext } from "../Hooks/AuthProvider";
 
 const ProfilePage = () => {
-  const {signut} = use(AuthContext)
+  const {signout} = use(AuthContext)
   // Dummy data
   const [formData, setFormData] = useState({
     name: "John Doe",
@@ -155,7 +155,7 @@ const ProfilePage = () => {
             {/* Logout Button */}
             <div className="mt-10">
               <button 
-              onClick={signut}
+              onClick={signout}
               className="w-full py-3 cursor-pointer rounded-xl bg-red-500 text-white font-medium hover:bg-red-600 shadow transition">
                 Logout
               </button>

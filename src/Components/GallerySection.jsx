@@ -1,5 +1,8 @@
+import Loading from "./Loading";
 
 export default function GallerySection({galleryImages}) {
+
+  if (!galleryImages || galleryImages.length === 0) return <Loading />;
 
   return (
     <section

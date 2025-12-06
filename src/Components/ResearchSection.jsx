@@ -1,5 +1,9 @@
+import Loading from "./Loading";
+
   
 export default function ResearchSection({ researchPapers }) {
+
+  if (!researchPapers || researchPapers.length === 0) return <Loading />;
   return (
     <section id="research" className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
